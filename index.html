@@ -1,215 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>مهد و پیش‌دبستانی شکوفه‌های امید</title>
+
 <style>
+
+/* رنگ‌های شاد کودکانه */
 :root{
-  --bg:#f7fbff; --card:#ffffff; --accent1:#ff9ec0; --accent2:#ffd56b; --accent3:#9be7c4; --accent4:#9fd2ff;
-  --text:#123; --muted:#5b6b7a; --radius:16px;
+  --pink:#ff8ec7;
+  --yellow:#ffd86b;
+  --green:#a7f5c9;
+  --blue:#9fd4ff;
+  --bg:#fff7ff;
+  --text:#263238;
 }
-*{box-sizing:border-box;font-family: 'Vazirmatn', Tahoma, sans-serif;}
-body{margin:0;background:linear-gradient(180deg,#f4fbff 0%, #ffffff 60%);color:var(--text);-webkit-font-smoothing:antialiased;}
-.container{max-width:980px;margin:20px auto;padding:20px;}
-.header{display:flex;align-items:center;justify-content:space-between;background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 20px rgba(18,30,45,0.06);}
-.brand{display:flex;align-items:center;gap:12px;}
-.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent4));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:28px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
-.title small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
-.contact{font-size:14px;text-align:left;color:var(--muted)}
-.hero{display:flex;gap:20px;align-items:center;margin-top:20px;}
-.hero .left{flex:1}
-.hero h1{font-size:28px;margin:0 0 8px 0}
-.hero p{margin:0;color:var(--muted)}
-.cta{margin-top:12px;display:flex;gap:10px}
-.btn{padding:10px 16px;border-radius:999px;border:none;cursor:pointer;font-weight:600}
-.btn-primary{background:linear-gradient(90deg,var(--accent3),var(--accent4));color:#063;color:white;box-shadow:0 8px 24px rgba(15,120,120,0.08);}
-.btn-outline{background:transparent;border:2px solid var(--accent4);color:var(--accent4)}
 
-/* classes list */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
-.card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(18,30,45,0.04);font-size:14px}
-.card h4{margin:0 0 8px 0;font-size:16px}
-
-/* Social fancy section */
-.social-section{position:relative;margin-top:28px;border-radius:18px;overflow:hidden;padding:22px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));box-shadow:0 10px 30px rgba(18,30,45,0.06)}
-.social-bg{position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(circle at 10% 20%, rgba(255,158,192,0.12) 0 10%, transparent 20%),
-  radial-gradient(circle at 80% 30%, rgba(255,213,107,0.12) 0 12%, transparent 24%),
-  radial-gradient(circle at 50% 80%, rgba(155,231,196,0.08) 0 14%, transparent 28%);
-  z-index:0;}
-.rainbow{position:absolute;left:8%;top:10%;width:80%;height:120px;background:
-  linear-gradient(90deg, rgba(255,158,192,0.35), rgba(255,213,107,0.35), rgba(155,231,196,0.35), rgba(159,210,255,0.35));
-  border-radius:80px;filter:blur(10px);transform:translateY(0);animation:glow 6s infinite ease-in-out;}
-@keyframes glow{0%{transform:translateY(0)}50%{transform:translateY(6px)}100%{transform:translateY(0)}}
-.cloud{position:absolute;background:#fff;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,0.06);opacity:0.95}
-.cloud.c1{width:160px;height:60px;left:6%;top:10%;animation:moveLeft 16s linear infinite}
-.cloud.c2{width:220px;height:78px;right:6%;top:18%;animation:moveRight 20s linear infinite}
-@keyframes moveLeft{0%{transform:translateX(-30px)}50%{transform:translateX(30px)}100%{transform:translateX(-30px)}}
-@keyframes moveRight{0%{transform:translateX(30px)}50%{transform:translateX(-30px)}100%{transform:translateX(30px)}}
-
-/* social content */
-.social-inner{position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;align-items:center}
-.social-title{font-size:18px;font-weight:800;display:flex;align-items:center;gap:8px}
-.social-sub{color:var(--muted);font-size:14px;margin-top:4px;text-align:center;max-width:720px}
-.social-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
-.social-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;min-width:170px;cursor:pointer;text-decoration:none;color:#123;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.whatsapp{background:linear-gradient(90deg,#c8f7d9,#9be7c4);}
-.telegram{background:linear-gradient(90deg,#d6edff,#9fd2ff);}
-.eitaa{background:linear-gradient(90deg,#fff1c4,#ffd56b);}
-.rubika{background:linear-gradient(90deg,#f6d8ff,#e5b9ff);}
-.bale{background:linear-gradient(90deg,#ffd6e6,#ffb6d3)}
-
-/* icon style */
-.icon{width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.6);box-shadow:0 6px 16px rgba(0,0,0,0.06)}
-
-/* working hours */
-.hours{margin-top:10px;background:linear-gradient(90deg,#fff7e6,#f2fff7);padding:10px;border-radius:12px;font-weight:700;color:#334} 
-
-.footer{margin-top:26px;padding:16px;text-align:center;color:var(--muted);font-size:13px}
-
-/* responsive */
-@media (max-width:720px){
-  .hero{flex-direction:column-reverse}
-  .header{flex-direction:column;gap:10px;align-items:flex-start}
-  .contact{text-align:right}
-  .social-btn{min-width:140px}
+/* فونت بزرگ و خوانا */
+body{
+  font-family: Tahoma, sans-serif;
+  background: var(--bg);
+  margin:0;
+  padding:0;
+  font-size:18px;
 }
+
+/* هدر کارتونی */
+.header{
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  padding:20px;
+  color:white;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* لوگوی کارتونی */
+.logo{
+  width:80px;
+  height:80px;
+  background: white;
+  border-radius:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:36px;
+  font-weight:bold;
+  color:#ff4ea0;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* عنوان */
+.title h1{
+  font-size:26px;
+  margin:0;
+}
+
+.title p{
+  margin:0;
+  color:#f8f8f8;
+  font-size:16px;
+}
+
+/* شماره‌ها راست‌به‌چپ و درست */
+.phones{
+  display:flex;
+  flex-direction:column;
+  font-size:20px;
+  font-weight:bold;
+  direction:rtl;
+}
+
+/* رنگی کردن شماره */
+.phones span{
+  background: white;
+  padding:6px 12px;
+  border-radius:10px;
+  color:#333;
+  margin-top:5px;
+  display:inline-block;
+}
+
 </style>
 </head>
 <body>
-<div class="container">
-  <header class="header" role="banner">
-    <div class="brand">
-      <div class="logo">ش</div>
-      <div class="title">
-        <div style="font-weight:900;font-size:18px">مهد و پیش‌دبستانی شکوفه‌های امید</div>
-        <small>محیطی گرم، آموزنده و خلاق برای رشد کودکان</small>
-      </div>
+
+<!-- بخش هدر کودکانه -->
+<div class="header">
+
+  <div style="display:flex;align-items:center;gap:15px;">
+    <div class="logo">👧👦</div>
+
+    <div class="title">
+      <h1>مهد و پیش‌دبستانی شکوفه‌های امید</h1>
+      <p>محیطی شاد، امن و خلاق برای کودکان</p>
     </div>
-    <div class="contact">
-      <div>مدیریت: <strong>خانم قهرمانی</strong></div>
-      <div style="margin-top:6px">تلفن‌ها: <strong>0919-5796815</strong> — <strong>0992-8002860</strong></div>
-    </div>
-  </header>
+  </div>
 
-  <section class="hero">
-    <div class="left">
-      <h1>ثبت‌نام آغاز شد — خانواده‌ها خوش‌آمدید!</h1>
-      <p>در شکوفه‌های امید، با روش‌های آموزشی نوین، بازی‌های هدفمند و فعالیت‌های هنری، مهارت‌های اجتماعی و علمی کودکان رشد می‌یابد.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#register">مشاهده کلاس‌ها و ثبت‌نام</a>
-        <a class="btn btn-outline" href="#contact">تماس</a>
-      </div>
+  <!-- بخش شماره‌ها -->
+  <div class="phones">
+    <span>۰۹۱۹۵۷۹۶۸۱۵</span>
+    <span>۰۹۹۲۸۰۰۲۸۶۰</span>
+  </div>
 
-      <div class="cards" aria-hidden="true">
-        <div class="card"><h4>محیط شاد و امن</h4><div class="muted">نظافت منظم و پروتکل‌های بهداشتی</div></div>
-        <div class="card"><h4>مربیان مجرب</h4><div class="muted">آموزش دیده و دارای مهارت کودک‌پروری</div></div>
-        <div class="card"><h4>گزارش به والدین</h4><div class="muted">گزارش روزانه از فعالیت‌ها</div></div>
-        <div class="card"><h4>فعالیت‌های هنری</h4><div class="muted">نقاشی، قصه‌خوانی و کاردستی</div></div>
-      </div>
-    </div>
-    <div style="flex:0 0 320px">
-      <div style="background:linear-gradient(180deg,#fff,#f8fbff);border-radius:16px;padding:8px;box-shadow:0 8px 30px rgba(0,0,0,0.06)">
-        <img src="" alt="تصویر مهد" style="width:100%;height:220px;border-radius:12px;background:linear-gradient(135deg,#fff7fc,#eef9ff);display:block;object-fit:cover" />
-        <div style="margin-top:8px;font-weight:800;color:var(--muted)">شروع از: تماس بگیرید</div>
-        <div style="color:var(--muted);font-size:13px">پکیج‌های متنوع برای رده‌های سنی مختلف</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- classes -->
-  <section id="classes" style="margin-top:18px">
-    <div style="background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,0.04)">
-      <h3 style="margin:0 0 10px 0">برگزاری کلاس‌ها و فعالیت‌ها</h3>
-      <p style="margin:0;color:var(--muted)">کلاس‌ها با برنامه‌ریزی منظم و متناسب با سن کودک برگزار می‌شود:</p>
-      <div class="cards" style="margin-top:12px">
-        <div class="card"><h4>آموزش قرآن و نماز</h4></div>
-        <div class="card"><h4>آموزش مفاهیم ریاضی</h4></div>
-        <div class="card"><h4>آموزش مفاهیم علوم</h4></div>
-        <div class="card"><h4>نقاشی خلاق و کاردستی</h4></div>
-        <div class="card"><h4>قصه‌خوانی و زبان</h4></div>
-        <div class="card"><h4>اردوهای علمی و تفریحی</h4></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL FANCY SECTION -->
-  <section class="social-section" aria-label="شبکه‌های اجتماعی شکوفه‌های امید">
-    <div class="social-bg"></div>
-    <div class="rainbow" aria-hidden="true"></div>
-    <div class="cloud c1" aria-hidden="true"></div>
-    <div class="cloud c2" aria-hidden="true"></div>
-
-    <div class="social-inner">
-      <div class="social-title">🎀 شبکه‌های اجتماعی مهدکودک شکوفه‌های امید</div>
-      <div class="social-sub">🌼 <strong>با ما در شبکه‌های اجتماعی همراه باشید تا از تازه‌ترین برنامه‌ها و لحظه‌های شیرین کودکان مطلع شوید!</strong> 🌈</div>
-
-      <div class="social-grid" role="list">
-        <a class="social-btn whatsapp" role="listitem" href="https://wa.me/989195796815" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true">☀️</span>
-          <span>واتساپ — پیام سریع</span>
-        </a>
-
-        <a class="social-btn telegram" role="listitem" href="https://t.me/+989195796815" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true">⭐</span>
-          <span>تلگرام — کانال/پیام</span>
-        </a>
-
-        <a class="social-btn eitaa" role="listitem" href="https://eitaa.com/09195796815" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true">🌸</span>
-          <span>ایتا — پیام‌رسان</span>
-        </a>
-
-        <a class="social-btn rubika" role="listitem" href="https://rubika.ir/09195796815" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true">💖</span>
-          <span>روبیکا — صفحه</span>
-        </a>
-
-        <a class="social-btn bale" role="listitem" href="https://bale.ai/09195796815" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true">🎈</span>
-          <span>بله — پیام‌رسان</span>
-        </a>
-      </div>
-
-      <div class="hours">🕐 <strong>ساعات کاری: همه‌روزه از ۷:۳۰ تا ۱۷:۰۰</strong></div>
-    </div>
-  </section>
-
-  <!-- registration -->
-  <section id="register" style="margin-top:18px">
-    <div style="background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,0.04)">
-      <h3>فرم پیش‌ثبت‌نام</h3>
-      <p style="color:var(--muted);margin-top:6px">فرم زیر را تکمیل کنید تا همکاران ما جهت هماهنگی بازدید تماس بگیرند.</p>
-      <form onsubmit="event.preventDefault(); alert('فرم ارسال شد — تیم ما با شما تماس خواهد گرفت.');" style="margin-top:12px;display:grid;gap:8px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <input required placeholder="نام کودک" style="padding:10px;border-radius:10px;border:1px solid #eee" />
-          <input required placeholder="نام والد/سرپرست" style="padding:10px;border-radius:10px;border:1px solid #eee" />
-          <input required placeholder="تلفن/موبایل" style="padding:10px;border-radius:10px;border:1px solid #eee" />
-          <input placeholder="ایمیل (اختیاری)" style="padding:10px;border-radius:10px;border:1px solid #eee" />
-        </div>
-        <select style="padding:10px;border-radius:10px;border:1px solid #eee">
-          <option>ردهٔ سنی: 2 - 3 سال</option>
-          <option>ردهٔ سنی: 3 - 4 سال</option>
-          <option>ردهٔ سنی: 4 - 5 سال</option>
-          <option>ردهٔ سنی: 5 - 6 سال</option>
-        </select>
-        <textarea placeholder="پیغام یا نیاز خاص" style="padding:10px;border-radius:10px;border:1px solid #eee"></textarea>
-        <div style="display:flex;gap:10px;align-items:center">
-          <button class="btn btn-primary" type="submit">ارسال پیش‌ثبت‌نام</button>
-          <div style="color:var(--muted)">پس از ارسال، همکاران جهت هماهنگی تماس می‌گیرند.</div>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <footer id="contact" style="margin-top:20px" class="footer">
-    <div style="font-weight:800">اطلاعات تماس</div>
-    <div style="margin-top:6px">مدیریت: <strong>خانم قهرمانی</strong> — تلفن: <strong>0919-5796815</strong> / <strong>0992-8002860</strong></div>
-    <div style="margin-top:8px">آدرس: نسیم‌شهر، ۱۴ متری چمران، خیابان بهشتی شمالی، پلاک ۲۳۶</div>
-    <div style="margin-top:10px;color:var(--muted)">© ۲۰۲۵ مهد و پیش‌دبستانی شکوفه‌های امید — کلیه حقوق محفوظ است.</div>
-  </footer>
 </div>
 
-</body>
-</html>
+<!-- تصویر کارتونی کودکانه -->
+<div style="text-align:center;margin:25px 0;">
+  <img src="https://i.postimg.cc/5t3Kp7Vd/kids-cartoon.png"
+       alt="کارتون کودکانه"
+       style="width:230px;border-radius:20px;box-shadow:0 5px 25px rgba(0,0,0,0.15);">
+</div>
+<!-- سکشن معرفی مهد -->
+<div style="
+  background: linear-gradient(135deg, var(--yellow), var(--pink));
+  padding:25px;
+  margin:20px;
+  border-radius:25px;
+  color:#333;
+  box-shadow:0 8px 25px rgba(0,0,0,0.12);
+">
+
+  <h2 style="text-align:center;color:white;font-size:26px;margin-top:0;">
+    🌈 درباره‌ی شکوفه‌های امید
+  </h2>
+
+  <p style="font-size:18px;color:white;text-align:center;line-height:1.9;">
+    در مهد و پیش‌دبستانی شکوفه‌های امید،  
+    با بازی، آموزش هدفمند، هنر و مهارت‌های اجتماعی  
+    آینده‌ای روشن برای کودکان می‌سازیم 🌸  
+  </p>
+
+</div>
+
+<!-- سکشن کلاس‌ها -->
+<div style="padding:20px;margin:20px;">
+  <h2 style="text-align:center;font-size:24px;color:var(--pink);">
+    🎨 کلاس‌ها و برنامه‌های آموزشی
+  </h2>
+
+  <div style="
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:18px;
+  ">
+
+    <div style="background:var(--green);padding:15px;border-radius:15px;font-size:18px;">
+      🌟 آموزش قرآن و مفاهیم دینی
+    </div>
+
+    <div style="background:var(--blue);padding:15px;border-radius:15px;font-size:18px;">
+      🔢 مفاهیم ریاضی به روش بازی
+    </div>
+
+    <div style="background:var(--yellow);padding:15px;border-radius:15px;font-size:18px;">
+      🔬 علوم و کشف دنیای اطراف
+    </div>
+
+    <div style="background:var(--pink);padding:15px;border-radius:15px;font-size:18px;">
+      ✂️ هنر، نقاشی و کاردستی
+    </div>
+
+    <div style="background:#b7eaff;padding:15px;border-radius:15px;font-size:18px;">
+      📚 قصه‌خوانی و تقویت زبان
+    </div>
+
+    <div style="background:#ffd6e6;padding:15px;border-radius:15px;font-size:18px;">
+      🎈 بازی‌های گروهی و مهارت‌های اجتماعی
+    </div>
+
+  </div>
+</div>
+<!-- شبکه‌های اجتماعی -->
+<div style="
+  background: linear-gradient(120deg, #ffe6f2, #e6f7ff);
+  padding:25px;
+  margin:20px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+">
+
+  <h2 style="color:#ff4ea0;font-size:24px;margin-top:0;">
+    🌐
+<!-- فرم پیش‌ثبت‌نام -->
+<div style="
+  background:white;
+  padding:25px;
+  margin:20px;
+  border-radius:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+">
+
+  <h2 style="text-align:center;color:#ff4ea0;">📝
