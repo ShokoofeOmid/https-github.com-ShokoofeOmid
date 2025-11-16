@@ -188,13 +188,67 @@ body{
 
   <h2 style="color:#ff4ea0;font-size:24px;margin-top:0;">
     🌐
-<!-- فرم پیش‌ثبت‌نام -->
-<div style="
-  background:white;
-  padding:25px;
-  margin:20px;
-  border-radius:25px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.1);
-">
+<!-- فرم پیش ثبت نام -->
+<div style="background:#ffffff;padding:25px;margin:20px;border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.12);">
 
-  <h2 style="text-align:center;color:#ff4ea0;">📝
+  <h2 style="text-align:center;color:#ff4ea0;">
+    📝 فرم پیش‌ثبت‌نام
+  </h2>
+
+  <p style="text-align:center;color:#444;">
+    پس از تکمیل فرم، واتساپ باز می‌شود و اطلاعات برای شما ارسال می‌گردد 🌸
+  </p>
+
+  <form onsubmit="sendToWhatsApp(event)" style="display:grid;gap:15px;margin-top:20px;">
+
+    <input id="childName" placeholder="نام کودک" required
+           style="padding:12px;border-radius:12px;border:1px solid #ccc;">
+
+    <input id="parentName" placeholder="نام والد" required
+           style="padding:12px;border-radius:12px;border:1px solid #ccc;">
+
+    <input id="phone" placeholder="شماره تماس" required
+           style="padding:12px;border-radius:12px;border:1px solid #ccc;direction:rtl;">
+
+    <select id="age" style="padding:12px;border-radius:12px;border:1px solid #ccc;">
+      <option>۲ تا ۳ سال</option>
+      <option>۳ تا ۴ سال</option>
+      <option>۴ تا ۵ سال</option>
+      <option>۵ تا ۶ سال</option>
+    </select>
+
+    <textarea id="note" placeholder="پیام یا توضیحات"
+              style="padding:12px;border-radius:12px;border:1px solid #ccc;min-height:90px;"></textarea>
+
+    <button type="submit"
+            style="padding:15px;border:none;border-radius:15px;
+                   background:linear-gradient(90deg,#ff8ec7,#9fd4ff);
+                   color:white;font-size:18px;font-weight:bold;cursor:pointer;">
+      📩 ارسال به واتساپ
+    </button>
+
+  </form>
+</div>
+
+<script>
+function sendToWhatsApp(event){
+  event.preventDefault();
+
+  let child = document.getElementById("childName").value;
+  let parent = document.getElementById("parentName").value;
+  let phone = document.getElementById("phone").value;
+  let age = document.getElementById("age").value;
+  let note = document.getElementById("note").value;
+
+  let text =
+    "فرم پیش‌ثبت‌نام:%0A" +
+    "نام کودک: " + child + "%0A" +
+    "نام والد: " + parent + "%0A" +
+    "شماره تماس: " + phone + "%0A" +
+    "رده سنی: " + age + "%0A" +
+    "توضیحات: " + note;
+
+  window.location.href = "https://wa.me/989195796815?text=" + text;
+}
+</script>
